@@ -5,16 +5,19 @@ metadata:
   name: db
 spec:
   # Name of the NDBServer resource created earlier
+  # matches name in ndb.yaml file, check!
   ndbRef: ndb
   isClone: false
   # Database instance specific details (that is to be provisioned)
   databaseInstance:
     # Cluster id of the cluster where the Database has to be provisioned
     # Can be fetched from the GET /clusters endpoint
+    # FILL
     clusterId: "Nutanix Cluster Id"
     # The database instance name on NDB
     name: "db"
     # The description of the database instance
+    # FILL
     description: Database Description
     # Names of the databases on that instance
     databaseNames:
@@ -23,6 +26,7 @@ spec:
       - database_three
     # Credentials secret name for NDB installation
     # data: password, ssh_public_key
+    # username from secret and ndb.yaml?
     credentialSecret: db-instance-secret-name
     size: 10
     timezone: "UTC"
@@ -32,6 +36,7 @@ spec:
     # If not specified, the corresponding Out-of-Box (OOB) profile will be used wherever applicable
     # Name is case-sensitive. ID is the UUID of the profile. Profile should be in the "READY" state
     # "id" & "name" are optional. If none provided, OOB may be resolved to any profile of that type
+    # FILL?
     profiles:
       compute:
         id: ""

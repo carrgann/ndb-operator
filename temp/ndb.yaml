@@ -10,8 +10,12 @@ metadata:
   name: ndb
 spec:
     # Name of the secret that holds the credentials for NDB: username, password and ca_certificate created earlier
+    # fill this in, matches un in secret.yaml?
     credentialSecret: ndb-secret-name
     # NDB Server's API URL
+    # fill in the NDB IP
     server: https://[NDB IP]:8443/era/v0.9
     # Set to true to skip SSL certificate validation, should be false if ca_certificate is provided in the credential secret.
     skipCertificateVerification: true
+
+# this file is critical for setting up connection between Kubernetes cluster and the NDB server

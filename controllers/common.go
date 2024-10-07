@@ -29,6 +29,7 @@ import (
 	ctrllog "sigs.k8s.io/controller-runtime/pkg/log"
 )
 
+// labels used to log states of NDB operator lifecycle
 const (
 	EVENT_CREATION_STARTED   = "CreationStarted"
 	EVENT_CREATION_FAILED    = "CreationFailed"
